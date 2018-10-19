@@ -1,0 +1,20 @@
+<p>
+  basictable works!
+</p>
+<mat-table [dataSource]="data">
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>id</mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>name</mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="price">
+    <mat-header-cell *matHeaderCellDef>price</mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.price}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="cols"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: cols"></mat-row>
+</mat-table>
